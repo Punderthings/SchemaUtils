@@ -1,0 +1,26 @@
+remote_theme: BDHU/minimalist
+title: Schema Utilities for GHPages OpenAPI sites
+logo: /assets/img/lifesaver.png
+description: Tooling for generating Jekyll layouts from JSON Schemas for OpenAPIs.
+show_downloads: false
+email: shane@punderthings.com
+color-scheme: auto
+blank_title: true
+
+author: Shane Curcuru
+social:
+  name: Punderthings℠ LLC
+  links:
+    - https://punderthings.com/
+    - https://shanecurcuru.org/
+
+seealso:
+  - title: "FOSS Foundation Metadata Directory"
+    url: "https://fossfoundation.info/"
+    tag: "Structured data about the organizations running FOSS projects"
+  - title: "Choose A Foundation"
+    url: "https://chooseafoundation.com/"
+    tag: "Guide to finding a FOSS Foundation for your project"
+  - title: "Community Over Code"
+    url: "https://communityovercode.com"
+    tag: "Community-driven open source stories from Apache"
