@@ -8,6 +8,7 @@ sitelist: # List of URLs
 baselist: # List of URL Fragments
 jjtestsingle: # JJResolver Test: single string
 jjtestarray: # JJResolver Test: array of strings
+configtest: # JJResolver Test: config test
 ---
 
 BODY_TEMPLATE This template is used for the {{ content }} of each template file (after frontmatter).

@@ -34,4 +34,5 @@
       {% endfor %}
     </ul>
     <br/>{% endif %}
+    {% if page.configtest %}<abbr title="Testing resolver against local _config.yml data.">JJResolver Test: config test</abbr>: {% assign jjmapping = site['configdata'] %}{% assign jjlinkmap = jjmapping | where: 'identifier', page.configtest | first %}{% if jjlinkmap %}<span itemprop="configtest"><a href="https://fossfoundation.info/foundations/{{ jjlinkmap['identifier'] }}">{{ jjlinkmap['name'] }}</a></span>{% else %}<span itemprop="configtest">{{ page.configtest }}</span>{% endif %}<br/>{% endif %}
   </section>

@@ -13,6 +13,7 @@ jjtestarray:
 - testtwo
 - testone
 - testnotfound
+configtest: asf
 ---
 
 Test collection first file.

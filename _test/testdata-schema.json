@@ -67,6 +67,12 @@
         "format": "jjresolver~testdata~identifier~name~/testdata/"
       },
       "uniqueItems": true
+    },
+    "configtest": {
+      "title": "JJResolver Test: config test",
+      "description": "Testing resolver against local _config.yml data.",
+      "type": "string",
+      "format": "jjresolver~foundations~identifier~commonName~https://fossfoundation.info/foundations/"
     }
   }
 }

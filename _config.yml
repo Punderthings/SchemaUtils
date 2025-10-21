@@ -30,3 +30,11 @@ collections:
     output: true
     sort_by: name
     permalink: /:collection/:path
+
+foundations:
+  - identifier: almalinux
+    commonName: AlmaLinux
+  - identifier: apereo
+    commonName: Apereo
+  - identifier: asf
+    commonName: Apache Software Foundation
