@@ -24,3 +24,9 @@ seealso:
   - title: "Community Over Code"
     url: "https://communityovercode.com"
     tag: "Community-driven open source stories from Apache"
+
+collections:
+  testdata:
+    output: true
+    sort_by: name
+    permalink: /:collection/:path

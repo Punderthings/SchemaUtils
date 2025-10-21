@@ -1,0 +1,8 @@
+  <li>
+    <h2>
+      <a id="{{ datum.identifier }}" href="/testdata/{{ datum.identifier }}">{{ datum.name }}</a>
+    </h2>
+    {% if datum.identifier %}<abbr title="Short name; lowercased; used for lookups.">OpenAPI lookup identifier</abbr>: <span itemprop="identifier">{{ datum.identifier }}</span><br/>{% endif %}
+    {% if datum.name %}<abbr title="Commonly used name of this object, for display.">Common Name</abbr>: <span itemprop="name">{{ datum.name }}</span><br/>{% endif %}
+    {% if datum.description %}<abbr title="One sentence brief overview of this object.">Description</abbr>: <span itemprop="description">{{ datum.description }}</span><br/>{% endif %}
+  </li>

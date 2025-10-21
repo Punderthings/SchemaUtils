@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$id": "https://github.com/Punderthings/SchemaUtils/blob/main/_testdata/testdata-template.md",
+  "type": "object",
+  "title": "Sample JSON schema to test generation of GHPages Jekyll includes and template.md.",
+  "required": ["identifier", "name", "description"],
+  "properties": {
+    "identifier": {
+      "section": "General",
+      "title": "OpenAPI lookup identifier",
+      "description": "Short name; lowercased; used for lookups.",
+      "type": "string"
+    },
+    "name": {
+      "title": "Common Name",
+      "description": "Commonly used name of this object, for display.",
+      "type": "string"
+    },
+    "description": {
+      "title": "Description",
+      "description": "One sentence brief overview of this object.",
+      "type": "string"
+    },
+    "website": {
+      "title": "Website",
+      "description": "Sample field linking to a URL.",
+      "type": "string",
+      "format": "url"
+    },
+    "basesite": {
+      "title": "URL Fragment",
+      "description": "Sample field linking to a base URL from schema format, plus the data field.",
+      "type": "string",
+      "format": "urlfragment~https://punderthings.github.io/SchemaUtils/"
+    },
+    "sitelist": {
+      "title": "List of URLs",
+      "description": "Sample array of URLs.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "url"
+      }
+    },
+    "baselist": {
+      "title": "List of URL Fragments",
+      "description": "Sample array of URL fragments.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "urlfragment~https://punderthings.github.io/SchemaUtils/"
+      }
+    },
+    "jjtestsingle": {
+      "section": "JJResolver Tests",
+      "title": "JJResolver Test: single string",
+      "description": "A single string of type=string, format=jjresolver~..",
+      "type": "string",
+      "format": "jjresolver~testdata~identifier~name~/testdata/"
+    },
+    "jjtestarray": {
+      "title": "JJResolver Test: array of strings",
+      "description": "Array of strings of type=string, format=jjresolver~..",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "jjresolver~testdata~identifier~name~/testdata/"
+      },
+      "uniqueItems": true
+    }
+  }
+}

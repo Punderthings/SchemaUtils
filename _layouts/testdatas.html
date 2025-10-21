@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<h2>Sample Layout For Data Listing</h2>
+
+{{ content }}
+
+<hr id="listing"/>
+<ul>
+  {% for datum in site.testdata %}
+    {% include testdata-listitem.html %}
+  {% endfor %}
+</ul>

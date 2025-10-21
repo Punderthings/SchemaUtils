@@ -1,0 +1,37 @@
+  <section id="general-section">
+    <h2 id="general">General</h2>
+    {% if page.identifier %}<abbr title="Short name; lowercased; used for lookups.">OpenAPI lookup identifier</abbr>: <span itemprop="identifier">{{ page.identifier }}</span><br/>{% endif %}
+    {% if page.name %}<abbr title="Commonly used name of this object, for display.">Common Name</abbr>: <span itemprop="name">{{ page.name }}</span><br/>{% endif %}
+    {% if page.description %}<abbr title="One sentence brief overview of this object.">Description</abbr>: <span itemprop="description">{{ page.description }}</span><br/>{% endif %}
+    {% if page.website %}<abbr title="Sample field linking to a URL.">Website</abbr>: <a itemprop="website" href="{{ page.website }}">{{ page.website }}</a><br/>{% endif %}
+    {% if page.basesite %}<abbr title="Sample field linking to a base URL from schema format, plus the data field.">URL Fragment</abbr>: <a itemprop="basesite" href="https://punderthings.github.io/SchemaUtils/{{ page.basesite }}">{{ page.basesite }}</a><br/>{% endif %}
+    {% if page.sitelist %}
+    <abbr title="Sample array of URLs.">List of URLs</abbr>:
+    <ul>
+      {% for loopitem in page.sitelist %}
+      <li><a itemprop="sitelist" href="{{ loopitem }}">{{ loopitem }}</a></li>
+      {% endfor %}
+    </ul>
+    <br/>{% endif %}
+    {% if page.baselist %}
+    <abbr title="Sample array of URL fragments.">List of URL Fragments</abbr>:
+    <ul>
+      {% for loopitem in page.baselist %}
+      <li><a itemprop="baselist" href="https://punderthings.github.io/SchemaUtils/{{ loopitem }}">{{ loopitem }}</a></li>
+      {% endfor %}
+    </ul>
+    <br/>{% endif %}
+  </section>
+  <section id="jjresolver tests-section">
+    <h2 id="jjresolver tests">JJResolver Tests</h2>
+    {% if page.jjtestsingle %}<abbr title="A single string of type=string, format=jjresolver~..">JJResolver Test: single string</abbr>: {% assign jjmapping = site['testdata'] %}{% assign jjlinkmap = jjmapping | where: 'identifier', page.jjtestsingle | first %}{% if jjlinkmap %}<span itemprop="jjtestsingle"><a href="/testdata/{{ jjlinkmap['identifier'] }}">{{ jjlinkmap['name'] }}</a></span>{% else %}<span itemprop="jjtestsingle">{{ page.jjtestsingle }}</span>{% endif %}<br/>{% endif %}
+    {% if page.jjtestarray %}
+    <abbr title="Array of strings of type=string, format=jjresolver~..">JJResolver Test: array of strings</abbr>:
+    <ul>
+{% assign jjmapping = site['testdata'] %}
+      {% for loopitem in page.jjtestarray %}
+      <li>{% assign jjlinkmap = jjmapping | where: 'identifier', loopitem | first %}{% if jjlinkmap %}<span itemprop="jjtestarray"><a href="/testdata/{{ jjlinkmap['identifier'] }}">{{ jjlinkmap['name'] }}</a></span>{% else %}<span itemprop="jjtestarray">{{ loopitem }}</span>{% endif %}</li>
+      {% endfor %}
+    </ul>
+    <br/>{% endif %}
+  </section>
